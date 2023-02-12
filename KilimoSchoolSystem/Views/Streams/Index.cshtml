@@ -1,0 +1,35 @@
+﻿@model IEnumerable<KilimoSchoolSystem.Models.Stream>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Form One Streams</h1>
+
+<p>
+    <a asp-action="Create">Add A New Stream</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StreamName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StreamName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.StreamId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.StreamId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.StreamId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

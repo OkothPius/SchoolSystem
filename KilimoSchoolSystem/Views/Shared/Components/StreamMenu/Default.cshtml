@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Stream>
+
+<div class="dropdown">
+    <button class="btn btn-outline-info dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="text-decoration-none" asp-controller="Students" asp-action="Index">Students</a>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        @foreach (var stream in Model)
+        {
+            <li><a class="dropdown-item" asp-controller="Students" asp-action="List" asp-route-stream="@stream.StreamName">@stream.StreamName</a></li>
+        }
+        <li> <a class="dropdown-item" asp-controller="Students" asp-action="List" asp-route-stream="">View all Students</a></li>
+    </ul>
+</div>

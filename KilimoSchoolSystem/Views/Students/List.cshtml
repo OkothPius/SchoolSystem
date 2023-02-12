@@ -1,0 +1,7 @@
+﻿@model StudentViewModel 
+
+<h1>@Model.CurrentStream</h1>
+@foreach (var student in Model.Students)
+{
+    <partial name="_PieCard" model="student"/>
+}
