@@ -1,1 +1,1 @@
-## A student REgistration System
+## A student Registration System
