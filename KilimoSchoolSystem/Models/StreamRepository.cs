@@ -11,12 +11,6 @@ namespace KilimoSchoolSystem.Models
             _kilimoSchoolSystemContext = kilimoSchoolSystemContext;
         }
 
-        public IEnumerable<Stream> AllStreams
-        {
-            get
-            {
-
-            }
-        }
+        public IEnumerable<Stream> AllStreams => _kilimoSchoolSystemContext.Stream;
     }
 }
