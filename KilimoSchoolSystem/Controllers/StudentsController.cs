@@ -12,7 +12,7 @@ using KilimoSchoolSystem.ViewModels;
 
 namespace KilimoSchoolSystem.Controllers
 {
-    public class StudentsController : Controller
+    public class StudentsController : Controller 
     {
         private readonly IStreamRepository _streamRepository;
         private readonly IStudentRepository _studentRepository;
@@ -119,8 +119,6 @@ namespace KilimoSchoolSystem.Controllers
         }
 
         // POST: Students/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("StudentId,Name,AdmissionNumber,DOB,StreamId")] Student student)
